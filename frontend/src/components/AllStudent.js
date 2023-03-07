@@ -19,32 +19,26 @@ const AllStudent = () => {
     getStudents();
   }, []);
   return (
-    <div className="bg-white shadow rounded p-4">
-      <h1 className="text-xl font-bold items-center">All students</h1>
-      <table className="table-auto w-full mt-4">
-        <thead>
-          <tr>
-            <th className="border px-4 py-2">Roll No.</th>
-            <th className="border px-4 py-2">Name</th>
-            <th className="border px-4 py-2">Gender</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-
-      {students.map((student) => (
-        <div key={student._id}>
-          <table className="table-auto w-full mt-4">
-            <tbody>
-              <tr>
-                <td className="border px-4 py-2">{student.rollNo}</td>
-                <td className="border px-4 py-2">{student.name}</td>
-                <td className="border px-4 py-2">{student.gender}</td>
-              </tr>
-            </tbody>
-          </table>
+    <div className="flex justify-center">
+      <div className="bg-white shadow rounded p-4 w-[40rem]">
+        <div>
+          <div className="flex justify-center p-4">
+            <h1 className="text-xl font-bold">All students</h1>
+          </div>
+          <div className="flex justify-center">
+            <p className="border px-4 py-2 w-[10rem]">Roll No.</p>
+            <p className="border px-4 py-2 w-[16rem]">Name</p>
+            <p className="border px-4 py-2 w-[10rem]">Gender</p>
+          </div>
+          {students.map((student) => (
+            <div key={student._id} className="flex justify-center">
+              <p className="border px-4 py-2 w-[10rem]">{student.rollNo}</p>
+              <p className="border px-4 py-2 w-[16rem]">{student.name}</p>
+              <p className="border px-4 py-2 w-[10rem]">{student.gender}</p>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 };
