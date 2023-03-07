@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-[#F5F5F5];
+    @apply text-base;
+    @apply font-normal;
+    @apply text-left;
+    @apply text-[#212529];
+    @apply leading-[1.5];
+  }
+}
+
+@layer components {
+  .nav {
+    @apply w-full pl-[30px] pr-[10px] flex justify-between items-center bg-[#1d304b];
+  }
+  .logo {
+    @apply inline-block;
+  }
+  .nav-links {
+    @apply flex list-none;
+  }
+  .nav-item a {
+    @apply inline-block pt-[10px] pb-[10px] pl-[15px] pr-[15px] text-white no-underline;
+  }
+  .nav-item:hover {
+    @apply bg-white;
+  }
+  .nav-item:hover a {
+    @apply text-green-800;
+  }
+  .logo img {
+    @apply w-[175px] align-middle;
+  }
+}
