@@ -2,13 +2,13 @@ const router = require("express").Router();
 let Student = require("../models/student");
 
 router.route("/add").post((req, res) => {
+  const rollNo = Number(req.body.rollNo);
   const name = req.body.name;
-  const age = Number(req.body.age);
   const gender = req.body.gender;
 
   const newStudent = new Student({
+    rollNo,
     name,
-    age,
     gender,
   });
 
@@ -35,11 +35,11 @@ router.route("/").get((req, res) => {
 router.route("/update/:id").put(async (req, res) => {
   let userId = req.params.id;
 
-  const { name, age, gender } = req.body;
+  const { rollNo, name, gender } = req.body;
 
   const updateStudent = {
+    rollNo,
     name,
-    age,
     gender,
   };
 

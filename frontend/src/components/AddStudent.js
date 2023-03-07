@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const AddStudent = () => {
+  const [rollNo, setRollNo] = useState("");
   const [name, setName] = useState("");
-  const [age, setAge] = useState("");
   const [gender, setGender] = useState("");
 
   function sendData(e) {
     e.preventDefault();
 
     const newStudent = {
+      rollNo,
       name,
-      age,
       gender,
     };
 
@@ -34,7 +34,7 @@ const AddStudent = () => {
             id="age"
             placeholder="student Roll No."
             onChange={(e) => {
-              setAge(e.target.value);
+              setRollNo(e.target.value);
             }}
           />
         </div>

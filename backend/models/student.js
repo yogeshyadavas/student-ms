@@ -3,13 +3,13 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const studentSchema = new Schema({
-  name: {
-    type: String,
+  rollNo: {
+    type: Number,
     required: true,
   },
 
-  age: {
-    type: Number,
+  name: {
+    type: String,
     required: true,
   },
 

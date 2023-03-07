@@ -26,13 +26,13 @@
   .nav-links {
     @apply flex list-none;
   }
-  .nav-item a {
+  .nav-item span {
     @apply inline-block pt-[10px] pb-[10px] pl-[15px] pr-[15px] text-white no-underline;
   }
   .nav-item:hover {
     @apply bg-white;
   }
-  .nav-item:hover a {
+  .nav-item:hover span {
     @apply text-green-800;
   }
   .logo img {
