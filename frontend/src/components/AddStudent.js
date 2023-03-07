@@ -25,12 +25,25 @@ const AddStudent = () => {
       });
   }
   return (
-    <div className="container">
+    <div className="flex flex-col justify-center items-center">
       <form onSubmit={sendData}>
+        <div className="">
+          <input
+            type="text"
+            className="border-2 border-gray-300 rounded-lg shadow-md p-2"
+            id="age"
+            placeholder="student Roll No."
+            onChange={(e) => {
+              setAge(e.target.value);
+            }}
+          />
+        </div>
+
+        <br />
         <div className="form-group">
           <input
             type="text"
-            className="form-control"
+            className="border-2 border-gray-300 rounded-lg shadow-md p-2"
             id="name"
             placeholder="student name"
             onChange={(e) => {
@@ -39,22 +52,10 @@ const AddStudent = () => {
           />
         </div>
         <br />
-        <div className="form-group">
+        <div className="">
           <input
             type="text"
-            className="form-control"
-            id="age"
-            placeholder="student Age"
-            onChange={(e) => {
-              setAge(e.target.value);
-            }}
-          />
-        </div>
-        <br />
-        <div className="form-group">
-          <input
-            type="text"
-            className="form-control"
+            className="border-2 border-gray-300 rounded-lg shadow-md p-2"
             id="gender"
             placeholder="student gender"
             onChange={(e) => {
@@ -63,7 +64,10 @@ const AddStudent = () => {
           />
         </div>
         <br />
-        <button type="submit" className="btn btn-primary">
+        <button
+          type="submit"
+          className="border-2 border-gray-300 rounded-lg shadow-md p-2 bg-blue-500 hover:bg-blue-700 text-white"
+        >
           Submit
         </button>
       </form>

@@ -20,31 +20,27 @@ const AllStudent = () => {
     getStudents();
   }, []);
   return (
-    <div>
-      <div className="">
-        <h1>All students</h1>
-
-        <table className="table">
-          <thead>
-            <tr>
-            <th scope="col">Roll No.</th>
-              <th scope="col">Name</th>
-              <th scope="col">gender</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
+    <div className="bg-white shadow rounded p-4">
+      <h1 className="text-xl font-bold">All students</h1>
+      <table className="table-auto w-full mt-4">
+        <thead>
+          <tr>
+            <th className="border px-4 py-2">Roll No.</th>
+            <th className="border px-4 py-2">Name</th>
+            <th className="border px-4 py-2">Gender</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
 
       {students.map((student) => (
-        <div className="" key={student.id}>
-          <table className="table">
-            <thead></thead>
+        <div key={student.id}>
+          <table className="table-auto w-full mt-4">
             <tbody>
               <tr>
-              <td>{student.age}</td>
-                <td>{student.name}</td>
-                <td>{student.gender}</td>
+                <td className="border px-4 py-2">{student.age}</td>
+                <td className="border px-4 py-2">{student.name}</td>
+                <td className="border px-4 py-2">{student.gender}</td>
               </tr>
             </tbody>
           </table>
